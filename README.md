@@ -1,2 +1,24 @@
-# DataManagementFullStack_RoR
-This project represents my development journey learning Ruby on Rails. The project will be a front and back end to manage and view data. The goal is to complete the functional stack with no generative AI assistance so that I can learn as much as I can.
+# README
+
+This README would normally document whatever steps are necessary to get the
+application up and running.
+
+Things you may want to cover:
+
+* Ruby version
+
+* System dependencies
+
+* Configuration
+
+* Database creation
+
+* Database initialization
+
+* How to run the test suite
+
+* Services (job queues, cache servers, search engines, etc.)
+
+* Deployment instructions
+
+* ...
