@@ -1,24 +1,45 @@
-# README
+# Data Management Full Stack (Ruby on Rails)
+A learning project to practice full-stack Ruby on Rails. The app manages and stores company logins, projects, and credentials. All code is written by hand, with no generative AI assistance, so I can actually learn the framework.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## Tasklist  
+- [x] Create Project
+- [x] Set up PostgreSQL, Tailwind, Hotwire
+- [x] Set up encrypted credentials for secrets
+- [ ] Create Company model
+- [ ] Create Project model, linked to Company
+- [ ] Create Account model, linked to Project
+- [ ] Create Credential model, linked to Account or Company directly
+- [ ] Add validation rules to all models
+- [ ] Encrypt credential fields (username, password, notes)
+- [ ] Build Company pages (list, view, add, edit, delete)
+- [ ] Build Project pages (list, view, add, edit, delete)
+- [ ] Build Account pages (list, view, add, edit, delete)
+- [ ] Build Credential pages (list, view, add, edit, delete)
+- [ ] Link pages together with nested navigation (Company > Project > Account > Credential)
+- [ ] Add search for finding a credential quickly
+- [ ] Add pagination for long lists
+- [ ] Seed the database with fake data for testing
+- [ ] Add signup and login pages
+- [ ] Add logout
+- [ ] Restrict data so a user only sees their own company's info
+- [ ] Add user roles (admin vs member) with different permissions
+- [ ] Make forms submit without a full page reload
+- [ ] Make new credentials appear in lists instantly, without a refresh
+- [ ] Add a show/hide password button
+- [ ] Add a copy-to-clipboard button for passwords
+- [ ] Log who views, edits, or deletes a credential, and when
+- [ ] Soft-delete credentials instead of permanently removing them
+- [ ] Add database-level safety rules on top of Rails validations
+- [ ] Send an email when a new credential is added
+- [ ] Add a scheduled check for passwords that haven't been changed in a while
+- [ ] Write tests for the models
+- [ ] Write tests for login and permissions
+- [ ] Write a test that walks through a full user journey
+- [ ] Run the style checker and clean up the code
+- [ ] Run the security checker and fix any warnings
+- [ ] Get automated checks passing on GitHub
+- [ ] Deploy the app
+- [ ] Set up database backups
+- [ ] Practice restoring the database from a backup
+- [ ] Add two-factor login
+- [ ] Add protection against repeated failed login attempts
