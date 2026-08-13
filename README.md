@@ -1,5 +1,56 @@
 # Data Management Full Stack (Ruby on Rails)
-A learning project to practice full-stack Ruby on Rails. The app manages and stores company logins, projects, and credentials. All code is written by hand, with no generative AI assistance, so I can actually learn the framework.
+My journey learning Ruby on Rails, built as a real project rather than a tutorial. It's a full-stack app for a single company to manage and view its own data — logins, projects, and credentials. Every line of code is written by hand, with no generative AI assistance, so the learning is real.
+
+## How to Use
+
+### First-time setup (after cloning)
+
+1. Install dependencies:
+   ```bash
+   bundle install
+   ```
+
+2. Set the database connection details in `config/database.yml` (host, username — password is handled separately, see below).
+
+3. Set up your local secrets. This project uses Rails encrypted credentials instead of a `.env` file:
+   ```bash
+   EDITOR="nano" bin/rails credentials:edit
+   ```
+   Add your Postgres password like this:
+   ```yaml
+   postgres:
+     password: newPassword
+   ```
+   Save and exit — this creates/updates `config/credentials.yml.enc` (safe to commit) and `config/master.key` (never committed, already in `.gitignore`).
+
+   Note: `config/master.key` is unique per machine/setup. If cloning this repo fresh, you'll need to either generate a new one (`bin/rails credentials:edit` will create it) or get the original `master.key` securely from wherever it was backed up — it is not, and should not be, in git.
+
+4. Create the databases:
+   ```bash
+   bin/rails db:create
+   bin/rails db:migrate
+   ```
+
+### Running the app
+
+Start the full dev environment (Rails server + Tailwind CSS watcher):
+```bash
+bin/dev
+```
+Accessible from `http://localhost:3000`.
+
+If you only need the Rails server without live Tailwind rebuilding:
+```bash
+bin/rails server
+```
+
+### Useful commands
+
+- `bin/rails console` — open an interactive console to inspect/edit data directly
+- `bin/rails db:seed` — populate the database with any seed data defined in `db/seeds.rb`
+- `bin/rubocop` — check code style
+- `bin/brakeman` — run a security scan
+- `bin/rails test` — run the test suite
 
 ## Tasklist  
 - [x] Create Project
@@ -21,7 +72,6 @@ A learning project to practice full-stack Ruby on Rails. The app manages and sto
 - [ ] Seed the database with fake data for testing
 - [ ] Add signup and login pages
 - [ ] Add logout
-- [ ] Restrict data so a user only sees their own company's info
 - [ ] Add user roles (admin vs member) with different permissions
 - [ ] Make forms submit without a full page reload
 - [ ] Make new credentials appear in lists instantly, without a refresh
@@ -43,3 +93,7 @@ A learning project to practice full-stack Ruby on Rails. The app manages and sto
 - [ ] Practice restoring the database from a backup
 - [ ] Add two-factor login
 - [ ] Add protection against repeated failed login attempts
+
+## Future Features
+- [ ] ERP system (inventory, finances, or other operational tracking — scope TBD)
+- [ ] Project overview & management (timelines, tasks, status tracking beyond just storing credentials)
