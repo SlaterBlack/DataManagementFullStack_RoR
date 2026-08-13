@@ -95,5 +95,5 @@ bin/rails server
 - [ ] Add protection against repeated failed login attempts
 
 ## Future Features
-- [ ] ERP system (inventory, finances, or other operational tracking — scope TBD)
-- [ ] Project overview & management (timelines, tasks, status tracking beyond just storing credentials)
+- [ ] ERP system
+- [ ] Project overview & management
