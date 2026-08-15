@@ -1,5 +1,5 @@
 # Data Management Full Stack (Ruby on Rails)
-My journey learning Ruby on Rails, built as a real project rather than a tutorial. It's a full-stack app for a single company to manage and view its own data — logins, projects, and credentials. Every line of code is written by hand, with no generative AI assistance, so the learning is real.
+My journey learning Ruby on Rails, built as a real project rather than a tutorial. It's a full-stack app for a single company to manage and view its own data — logins, projects, and credentials.
 
 ## How to Use
 
@@ -97,3 +97,122 @@ bin/rails server
 ## Future Features
 - [ ] ERP system
 - [ ] Project overview & management
+
+### CLI commands (for my reference)
+AYep — much cleaner for a quick-reference MD file. I'd structure it like this:
+
+# Rails CLI Commands
+
+## Generator / Destroy
+
+Most generators can use the same command with `g` or `d`:
+
+| Generate                           | Destroy                            |
+| ---------------------------------- | ---------------------------------- |
+| `rails g model User`               | `rails d model User`               |
+| `rails g controller Users`         | `rails d controller Users`         |
+| `rails g migration AddNameToUsers` | `rails d migration AddNameToUsers` |
+| `rails g scaffold Post`            | `rails d scaffold Post`            |
+| `rails g resource Post`            | `rails d resource Post`            |
+| `rails g mailer UserMailer`        | `rails d mailer UserMailer`        |
+| `rails g job SendEmail`            | `rails d job SendEmail`            |
+
+
+## Controllers & Views
+
+| Command                              | Description                                  |
+| ------------------------------------ | -------------------------------------------- |
+| `rails g controller NAME`            | Generate a controller                        |
+| `rails g controller NAME index show` | Generate a controller with actions and views |
+| `rails g scaffold NAME`              | Generate complete CRUD including views       |
+| `rails d controller NAME`            | Destroy a generated controller and its files |
+| `rails d scaffold NAME`              | Destroy scaffold-generated files             |
+
+## Models
+
+| Command                              | Description                                |
+| ------------------------------------ | ------------------------------------------ |
+| `rails g model NAME`                 | Generate a model and migration             |
+| `rails g model NAME name:string`     | Generate a model with a field              |
+| `rails g model NAME user:references` | Generate a model with a database reference |
+| `rails d model NAME`                 | Destroy a generated model and migration    |
+
+## Database & Migrations
+
+| Command                    | Description                                  |
+| -------------------------- | -------------------------------------------- |
+| `rails db:create`          | Create the database                          |
+| `rails db:drop`            | Drop the database                            |
+| `rails db:migrate`         | Run pending migrations                       |
+| `rails db:rollback`        | Roll back the latest migration               |
+| `rails db:rollback STEP=3` | Roll back multiple migrations                |
+| `rails db:migrate:status`  | Show migration status                        |
+| `rails db:version`         | Show current migration version               |
+| `rails db:reset`           | Drop, create, migrate, and seed the database |
+| `rails db:setup`           | Create, migrate, and seed the database       |
+| `rails db:seed`            | Run `db/seeds.rb`                            |
+| `rails g migration NAME`   | Generate a migration                         |
+
+## Routes
+
+| Command                 | Description                       |
+| ----------------------- | --------------------------------- |
+| `rails routes`          | List all application routes       |
+| `rails routes -g NAME`  | Filter routes by name             |
+| `rails g resource NAME` | Generate resource and routes      |
+| `rails g scaffold NAME` | Generate resource and CRUD routes |
+
+## Server & Console
+
+| Command               | Description                                  |
+| --------------------- | -------------------------------------------- |
+| `rails s`             | Start the Rails development server           |
+| `rails c`             | Open the Rails console                       |
+| `rails db`            | Open the database console                    |
+| `rails runner 'CODE'` | Run Ruby/Rails code from the command line    |
+| `rails about`         | Show information about the Rails application |
+| `rails version`       | Show the Rails version                       |
+
+## Testing
+
+| Command                | Description              |
+| ---------------------- | ------------------------ |
+| `rails test`           | Run the test suite       |
+| `rails test FILE`      | Run a specific test file |
+| `rails test FILE:LINE` | Run a specific test      |
+| `rails test:models`    | Run model tests          |
+
+## Assets
+
+| Command                   | Description                |
+| ------------------------- | -------------------------- |
+| `rails assets:precompile` | Compile assets             |
+| `rails assets:clean`      | Remove old compiled assets |
+
+## Maintenance
+
+| Command            | Description                             |
+| ------------------ | --------------------------------------- |
+| `rails tmp:clear`  | Clear temporary files                   |
+| `rails log:clear`  | Clear log files                         |
+| `rails notes`      | Find TODO, FIXME, and OPTIMIZE comments |
+| `rails stats`      | Show code statistics                    |
+| `rails middleware` | List middleware                         |
+
+## Credentials
+
+| Command                  | Description                   |
+| ------------------------ | ----------------------------- |
+| `rails credentials:edit` | Edit encrypted credentials    |
+| `rails credentials:show` | Display decrypted credentials |
+
+## Command Shorthands
+
+| Shorthand  | Full Command      | Description             |
+| ---------- | ----------------- | ----------------------- |
+| `rails s`  | `rails server`    | Start server            |
+| `rails c`  | `rails console`   | Open console            |
+| `rails g`  | `rails generate`  | Generate files          |
+| `rails d`  | `rails destroy`   | Destroy generated files |
+| `rails db` | `rails dbconsole` | Open database console   |
+| `rails t`  | `rails test`      | Run tests               |
