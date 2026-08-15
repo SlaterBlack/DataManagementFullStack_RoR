@@ -27,8 +27,8 @@ My journey learning Ruby on Rails, built as a real project rather than a tutoria
 
 4. Create the databases:
    ```bash
-   bin/rails db:create
-   bin/rails db:migrate
+   rails db:create
+   rails db:migrate
    ```
 
 ### Running the app
@@ -41,24 +41,24 @@ Accessible from `http://localhost:3000`.
 
 If you only need the Rails server without live Tailwind rebuilding:
 ```bash
-bin/rails server
+rails server
 ```
 
 ### Useful commands
 
-- `bin/rails console` — open an interactive console to inspect/edit data directly
-- `bin/rails db:seed` — populate the database with any seed data defined in `db/seeds.rb`
-- `bin/rubocop` — check code style
-- `bin/brakeman` — run a security scan
-- `bin/rails test` — run the test suite
+- `rails console` — open an interactive console to inspect/edit data directly
+- `rails db:seed` — populate the database with any seed data defined in `db/seeds.rb`
+- `rubocop` — check code style
+- `brakeman` — run a security scan
+- `rails test` — run the test suite
 
 ## Tasklist  
 - [x] Create Project
 - [x] Set up PostgreSQL, Tailwind, Hotwire
 - [x] Set up encrypted credentials for secrets
-- [ ] Create Company model
-- [ ] Create Project model, linked to Company
-- [ ] Create Account model, linked to Project
+- [x] Create Company model
+- [x] Create Project model, linked to Company
+- [x] Create Account model, linked to Project
 - [ ] Create Credential model, linked to Account or Company directly
 - [ ] Add validation rules to all models
 - [ ] Encrypt credential fields (username, password, notes)
